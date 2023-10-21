@@ -41,16 +41,16 @@ const ProductItem = ({ product }: ProductItemProps) => {
             {product.discountPercentage > 0 ? (
               <>
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap font-semibold">
-                  R$ {product.totalPrice.toFixed(2)}
+                  R$ {product.totalPrice.toFixed(2).replace(".", ",")}
                 </p>
 
                 <p className="overflow-hidden text-ellipsis whitespace-nowrap text-xs line-through opacity-75">
-                  R$ {Number(product.basePrice).toFixed(2)}
+                  R$ {Number(product.basePrice).toFixed(2).replace(".", ",")}
                 </p>
               </>
             ) : (
               <p className="overflow-hidden text-ellipsis whitespace-nowrap text-sm font-semibold">
-                R$ {product.basePrice.toFixed(2)}
+                R$ {product.basePrice.toFixed(2).replace(".", ",")}
               </p>
             )}
           </div>
