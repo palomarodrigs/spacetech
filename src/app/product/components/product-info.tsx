@@ -2,15 +2,10 @@
 
 import { ProductWithTotalPrice } from "@/helpers/product";
 import { Badge } from "@/components/ui/badge";
-import {
-  ArrowDownIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  LucideTruck,
-  TruckIcon,
-} from "lucide-react";
+import { ArrowDownIcon, ArrowLeftIcon, ArrowRightIcon } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import TruckFastIcon from "./truck-fast-icon";
 
 interface ProductInfoProps {
   product: Pick<
@@ -84,7 +79,7 @@ const ProductInfo = ({
 
       <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-[22px] py-2">
         <div className="flex items-center gap-2">
-          <LucideTruck />
+          <TruckFastIcon />
 
           <div className="flex flex-col">
             <p className="text-xs">
