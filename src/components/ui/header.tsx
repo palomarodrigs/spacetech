@@ -139,7 +139,10 @@ const Header = () => {
 
       <Link href="/">
         <h1 className="text-lg font-semibold">
-          <span className="text-primary">Space</span>Tech
+          <span className="bg-gradient-to-r from-[#5033C3] to-[#8162FF] bg-clip-text text-transparent">
+            Space
+          </span>
+          Tech
         </h1>
       </Link>
 
