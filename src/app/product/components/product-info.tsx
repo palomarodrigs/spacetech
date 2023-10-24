@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { Button } from "@/components/ui/button";
 import TruckFastIcon from "./truck-fast-icon";
 import { CartContext } from "@/providers/cart";
+import { toast } from "react-toastify";
 
 interface ProductInfoProps {
   product: ProductWithTotalPrice;
@@ -27,6 +28,8 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
 
   const handleAddToCartClick = () => {
     addProductToCart({ ...product, quantity });
+
+    toast.success("Adicionado ao carrinho com sucesso!");
   };
 
   return (
