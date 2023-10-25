@@ -9,9 +9,24 @@ import Link from "next/link";
 import { SheetClose } from "./sheet";
 import { Separator } from "./separator";
 import { ScrollArea } from "./scroll-area";
+import { createOrder } from "@/actions/order";
+import { useSession } from "next-auth/react";
+import { toast } from "react-toastify";
 
 const Cart = () => {
   const { products, subtotal, totalDiscount, total } = useContext(CartContext);
+  const { data } = useSession();
+
+  const handleFinishPayment = async () => {
+    if (!data?.user) {
+      return;
+    }
+
+    await createOrder(products, (data?.user as any).id);
+
+    toast.success("Pedido finalizado com sucesso!");
+  };
+
   return (
     <div className="flex h-full flex-col gap-8">
       {products.length > 0 ? (
@@ -86,7 +101,12 @@ const Cart = () => {
             <p>R$ {total.toFixed(2).replace(".", ",")}</p>
           </div>
 
-          <Button className="mt-7 font-bold uppercase">Finalizar compra</Button>
+          <Button
+            className="mt-7 font-bold uppercase"
+            onClick={handleFinishPayment}
+          >
+            Finalizar compra
+          </Button>
         </div>
       )}
     </div>
