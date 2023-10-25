@@ -26,7 +26,7 @@ const OrderPage = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-8 p-5">
+    <div className="mt-5 flex flex-col gap-8 p-5">
       <BadgeTitle icon={<PackageSearchIcon size={16} />} title="Meus pedidos" />
 
       <div className="flex flex-col gap-5">

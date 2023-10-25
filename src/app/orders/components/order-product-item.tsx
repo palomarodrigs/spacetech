@@ -15,7 +15,7 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
 
   return (
     <div className="flex items-center gap-4">
-      <div className="bg-accent-rounded-lg flex h-[77px] w-[77px] items-center justify-center">
+      <div className="flex h-[77px] w-[100px] items-center justify-center rounded-lg bg-accent">
         <Image
           src={orderProduct.product.imageUrls[0]}
           width={0}
@@ -26,8 +26,8 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
         />
       </div>
 
-      <div className="flex flex-col w-full gap-1">
-        <div className="flex rounded-md bg-accent px-3 py-1 w-fit">
+      <div className="flex w-full flex-col gap-1">
+        <div className="flex w-fit rounded-md bg-accent px-3 py-1">
           <p className="text-[10px]">
             Vendido e entregue por: <span className="font-bold">SpaceTech</span>
           </p>
@@ -35,7 +35,7 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
 
         <p className="text-xs">{orderProduct.product.name}</p>
 
-        <div className="flex items-center w-full justify-between gap-1">
+        <div className="flex w-full items-center justify-between gap-1">
           <div className="flex items-center gap-1">
             <p className="text-sm font-bold">
               R$ {productWithTotalPrice.totalPrice.toFixed(2).replace(".", ",")}
@@ -51,7 +51,7 @@ const OrderProductItem = ({ orderProduct }: OrderProductItemProps) => {
             )}
           </div>
 
-          <p className="opacity-60 text-xs">Qntd: {orderProduct.quantity}</p>
+          <p className="text-xs opacity-60">Qntd: {orderProduct.quantity}</p>
         </div>
       </div>
     </div>
