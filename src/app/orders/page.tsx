@@ -17,12 +17,16 @@ const OrderPage = async () => {
       userId: (user as any).id,
     },
     include: {
-      orderProduct: true,
+      orderProduct: {
+        include: {
+          product: true,
+        },
+      },
     },
   });
 
   return (
-    <div className="p-5">
+    <div className="flex flex-col gap-8 p-5">
       <BadgeTitle icon={<PackageSearchIcon size={16} />} title="Meus pedidos" />
 
       <div className="flex flex-col gap-5">
