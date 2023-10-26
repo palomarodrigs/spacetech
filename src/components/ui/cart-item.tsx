@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "./button";
 import { ArrowLeftIcon, ArrowRightIcon, TrashIcon } from "lucide-react";
 import { useContext } from "react";
+import { toast } from "react-toastify";
 
 interface CartItemProps {
   product: CartProduct;
@@ -25,6 +26,7 @@ const CartItem = ({ product }: CartItemProps) => {
 
   const handleRemoveProductFromCart = () => {
     removeProductFromCart(product.id);
+    toast.success("Removido do carrinho com sucesso!");
   };
 
   return (
