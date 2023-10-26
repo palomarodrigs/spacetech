@@ -4,19 +4,20 @@ import { prismaClient } from "@/lib/prisma";
 import { PackageSearchIcon } from "lucide-react";
 import { getServerSession } from "next-auth";
 import OrderItem from "./components/order-item";
+import AccessDenied from "@/components/ui/access-denied";
 
 export const dynamic = "force-dynamic";
 
 const OrderPage = async () => {
-  const user = getServerSession(authOptions);
+  const session = await getServerSession(authOptions);
 
-  if (!user) {
-    return <p>Access denied!</p>;
+  if (!session || !session.user) {
+    return <AccessDenied />;
   }
 
   const orders = await prismaClient.order.findMany({
     where: {
-      userId: (user as any).id,
+      userId: session.user.id,
     },
     include: {
       orderProduct: {
