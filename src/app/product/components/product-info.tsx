@@ -8,12 +8,17 @@ import { Button } from "@/components/ui/button";
 import TruckFastIcon from "./truck-fast-icon";
 import { CartContext } from "@/providers/cart";
 import { toast } from "react-toastify";
+import { useSession } from "next-auth/react";
 
 interface ProductInfoProps {
   product: ProductWithTotalPrice;
 }
 
 const ProductInfo = ({ product }: ProductInfoProps) => {
+  const { status } = useSession();
+
+  const isUnauthenticated = status === "unauthenticated";
+
   const [quantity, setQuantity] = useState(1);
 
   const { addProductToCart } = useContext(CartContext);
@@ -27,8 +32,11 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
 
   const handleAddToCartClick = () => {
-    addProductToCart({ ...product, quantity });
+    if (isUnauthenticated) {
+      return toast.error("Entre na sua conta para adicionar ao carrinho!");
+    }
 
+    addProductToCart({ ...product, quantity });
     toast.success("Adicionado ao carrinho com sucesso!");
   };
 
