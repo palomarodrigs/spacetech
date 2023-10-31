@@ -32,14 +32,14 @@ const Home = async () => {
   return (
     <div className="flex flex-col gap-8 py-5 lg:pt-0">
       <PromoBanner
-        src="/banner-home-offers.png"
+        src="/banner-home-offers-desktop.png"
         alt="Ofertas imperdíveis! Até 55% de desconto só esse mês."
         className="hidden lg:block lg:w-full"
       />
 
       <div className="block lg:hidden">
         <PromoBanner
-          src="/banner-home-01.png"
+          src="/banner-home-offers-mobile.png"
           alt="Até 55% de desconto esse mês!"
         />
       </div>
@@ -53,17 +53,24 @@ const Home = async () => {
         <ProductList products={deals} />
       </div>
 
-      <div className="lg:flex lg:items-center lg:justify-center lg:gap-9 lg:px-5">
-        <div className="lg:w-[37.5rem]">
+      <div className="block lg:hidden">
+        <PromoBanner
+          src="/banner-home-mouses-mobile.png"
+          alt="Até 55% de desconto em mouses!"
+        />
+      </div>
+
+      <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-9 lg:px-5">
+        <div className="hidden lg:block lg:w-[37.5rem]">
           <PromoBanner
-            src="/banner-home-02.png"
+            src="/banner-home-mouses-desktop.png"
             alt="Até 55% de desconto em mouses!"
           />
         </div>
 
         <div className="hidden lg:block lg:w-[37.5rem]">
           <PromoBanner
-            src="/banner-home-03.png"
+            src="/banner-home-headsets-desktop.png"
             alt="Até 55% de desconto em fones!"
           />
         </div>
@@ -83,7 +90,7 @@ const Home = async () => {
 
       <div className="block lg:hidden">
         <PromoBanner
-          src="/banner-home-03.png"
+          src="/banner-home-headsets-mobile.png"
           alt="Até 55% de desconto em fones!"
         />
       </div>
