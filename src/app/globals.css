@@ -79,3 +79,17 @@
     @apply h-full;
   }
 }
+
+@layer utilities {
+  .nav {
+    @apply relative font-semibold text-gray-600 hover:text-gray-800;
+  }
+
+  .nav::after {
+    @apply absolute bottom-[0px] left-0 h-[3px] w-[0%] rounded-xl bg-primary duration-300 content-[''];
+  }
+
+  .nav:hover::after {
+    @apply w-[100%];
+  }
+}

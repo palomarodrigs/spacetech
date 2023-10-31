@@ -36,7 +36,7 @@ const Header = () => {
       <SidebarNavigation />
 
       <Link href="/">
-        <h1 className="text-lg font-semibold lg:text-2xl">
+        <h1 className="text-lg font-semibold duration-300 hover:brightness-90 lg:text-2xl">
           <span className="bg-gradient-to-r from-[#5033C3] to-[#8162FF] bg-clip-text text-transparent">
             Space
           </span>
@@ -44,22 +44,28 @@ const Header = () => {
         </h1>
       </Link>
 
-      <div className="hidden lg:flex lg:gap-8 lg:font-semibold">
-        <Link href="/">Início</Link>
+      <div className="hidden lg:flex lg:gap-8">
+        <Link href="/" className="nav">
+          Início
+        </Link>
 
         <div className="w-[2px] rounded bg-[#2A2A2A]"></div>
 
-        <Link href="/catalog">Catálogo</Link>
+        <Link href="/catalog" className="nav">
+          Catálogo
+        </Link>
 
         <div className="w-[2px] rounded bg-[#2A2A2A]"></div>
 
-        <Link href="/deals">Ofertas</Link>
+        <Link href="/deals" className="nav">
+          Ofertas
+        </Link>
       </div>
 
       <div className="flex gap-7">
         <div className="hidden lg:block">
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background p-2 text-sm font-medium hover:bg-accent hover:text-accent-foreground">
+            <DropdownMenuTrigger className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background p-2 text-sm font-medium duration-300 hover:bg-accent hover:text-accent-foreground">
               <UserIcon />
             </DropdownMenuTrigger>
 
