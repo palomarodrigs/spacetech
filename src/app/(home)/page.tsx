@@ -30,38 +30,66 @@ const Home = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-8 py-5">
+    <div className="flex flex-col gap-8 py-5 lg:pt-0">
       <PromoBanner
-        src="/banner-home-01.png"
-        alt="Até 55% de desconto esse mês!"
+        src="/banner-home-offers.png"
+        alt="Ofertas imperdíveis! Até 55% de desconto só esse mês."
+        className="hidden lg:block lg:w-full"
       />
+
+      <div className="block lg:hidden">
+        <PromoBanner
+          src="/banner-home-01.png"
+          alt="Até 55% de desconto esse mês!"
+        />
+      </div>
 
       <div className="px-5">
         <Categories />
       </div>
 
       <div>
-        <SectionTitle>Ofertas</SectionTitle>
+        <SectionTitle url="/deals">Ofertas</SectionTitle>
         <ProductList products={deals} />
       </div>
 
-      <PromoBanner
-        src="/banner-home-02.png"
-        alt="Até 55% de desconto em mouses!"
-      />
+      <div className="lg:flex lg:items-center lg:justify-center lg:gap-9 lg:px-5">
+        <div className="lg:w-[37.5rem]">
+          <PromoBanner
+            src="/banner-home-02.png"
+            alt="Até 55% de desconto em mouses!"
+          />
+        </div>
+
+        <div className="hidden lg:block lg:w-[37.5rem]">
+          <PromoBanner
+            src="/banner-home-03.png"
+            alt="Até 55% de desconto em fones!"
+          />
+        </div>
+      </div>
 
       <div>
-        <SectionTitle>Teclados</SectionTitle>
+        <SectionTitle url="/category/keyboards">Teclados</SectionTitle>
         <ProductList products={keyboards} />
       </div>
 
-      <PromoBanner
-        src="/banner-home-03.png"
-        alt="Até 55% de desconto em fones!"
-      />
+      <div className="hidden lg:block lg:px-5">
+        <PromoBanner
+          src="/banner-home-free-express.png"
+          alt="Frete Grátis para todo o Brasil!"
+        />
+      </div>
+
+      <div className="block lg:hidden">
+        <PromoBanner
+          src="/banner-home-03.png"
+          alt="Até 55% de desconto em fones!"
+        />
+      </div>
 
       <div>
-        <SectionTitle>Mouses</SectionTitle>
+        <SectionTitle url="/category/mouses">Mouses</SectionTitle>
         <ProductList products={mouses} />
       </div>
     </div>
