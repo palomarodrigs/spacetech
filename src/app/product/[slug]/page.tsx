@@ -43,7 +43,7 @@ const ProductDetailsPage = async ({
       <ProductInfo product={computeProductTotalPrice(product)} />
 
       <div>
-        <SectionTitle>Produtos recomendados</SectionTitle>
+        <p className="ml-5 mb-5 font-bold uppercase">Produtos recomendados</p>
         <ProductList products={product.category.products} />
       </div>
     </div>
