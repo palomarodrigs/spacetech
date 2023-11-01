@@ -41,7 +41,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
 
   return (
-    <div className="flex flex-col px-5">
+    <div className="flex flex-col px-5 lg:rounded-2xl lg:bg-accent lg:p-10">
       <h2 className="text-lg">{product.name}</h2>
 
       <div className="flex items-center gap-1">
@@ -54,8 +54,11 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
       </div>
 
       {product.discountPercentage > 0 && (
-        <p className="text-sm line-through opacity-75">
-          R$ {Number(product.basePrice).toFixed(2).replace(".", ",")}
+        <p className="text-sm opacity-75">
+          De:{" "}
+          <span className="line-through">
+            R$ {Number(product.basePrice).toFixed(2).replace(".", ",")}
+          </span>
         </p>
       )}
 
@@ -79,19 +82,21 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
         </Button>
       </div>
 
-      <div className="mt-8 flex flex-col gap-3">
+      <div className="mt-8 flex flex-col gap-3 ">
         <h3 className="font-bold">Descrição</h3>
-        <p className="text-justify text-sm opacity-60">{product.description}</p>
+        <p className="text-justify text-sm opacity-60 lg:max-h-[220px] lg:overflow-hidden">
+          {product.description}
+        </p>
       </div>
 
       <Button
-        className="mt-8 font-bold uppercase"
+        className="mt-10 font-bold uppercase"
         onClick={handleAddToCartClick}
       >
         Adicionar ao carrinho
       </Button>
 
-      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-[22px] py-2">
+      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-[22px] py-2 lg:bg-gray-200">
         <div className="flex items-center gap-2">
           <TruckFastIcon />
 
