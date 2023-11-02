@@ -30,7 +30,7 @@ const Home = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-8 py-5 lg:pt-0">
+    <div className="flex flex-col gap-8 py-5 lg:py-10 lg:pt-0">
       <PromoBanner
         src="/banner-home-offers-desktop.png"
         alt="Ofertas imperdíveis! Até 55% de desconto só esse mês."
@@ -60,18 +60,20 @@ const Home = async () => {
         />
       </div>
 
-      <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-9 lg:px-5">
-        <div className="hidden lg:block lg:w-[37.5rem]">
+      <div className="hidden lg:flex lg:gap-9 lg:px-[100px]">
+        <div className="hidden lg:block">
           <PromoBanner
             src="/banner-home-mouses-desktop.png"
             alt="Até 55% de desconto em mouses!"
+            className="lg:w-full lg:pr-0"
           />
         </div>
 
-        <div className="hidden lg:block lg:w-[37.5rem]">
+        <div className="hidden lg:block">
           <PromoBanner
             src="/banner-home-headsets-desktop.png"
             alt="Até 55% de desconto em fones!"
+            className="lg:w-full lg:pl-0"
           />
         </div>
       </div>
@@ -81,7 +83,7 @@ const Home = async () => {
         <ProductList products={keyboards} />
       </div>
 
-      <div className="hidden lg:block lg:px-5">
+      <div className="hidden lg:block">
         <PromoBanner
           src="/banner-home-free-express.png"
           alt="Frete Grátis para todo o Brasil!"
