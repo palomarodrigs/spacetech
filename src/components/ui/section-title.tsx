@@ -8,7 +8,7 @@ interface SectionTitleProps extends ComponentProps<"p"> {
 
 const SectionTitle = ({ children, url, ...props }: SectionTitleProps) => {
   return (
-    <div className="mb-5 flex items-center justify-between px-5">
+    <div className="mb-5 flex items-center justify-between px-5 lg:px-[100px]">
       <p className="font-bold uppercase">{children}</p>
 
       <Link href={url}>
