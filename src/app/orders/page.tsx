@@ -35,7 +35,7 @@ const OrderPage = async () => {
   });
 
   return (
-    <div className="mt-5 flex flex-col gap-8 p-5">
+    <div className="flex flex-col gap-8 p-5 lg:px-[100px] lg:py-10 ">
       {orders.length > 0 ? (
         <BadgeTitle
           icon={<PackageSearchIcon size={16} />}
