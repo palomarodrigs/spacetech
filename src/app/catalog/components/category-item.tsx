@@ -10,7 +10,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
   return (
     <Link href={`/category/${category.slug}`}>
       <div className="flex flex-col">
-        <div className="flex h-[150px] w-full items-center justify-center rounded-tl-lg rounded-tr-lg bg-category-item-gradient lg:h-[185px] lg:w-[386px]">
+        <div className="flex h-[150px] w-full items-center justify-center rounded-tl-lg rounded-tr-lg bg-category-item-gradient lg:h-[185px] lg:w-[330px]">
           <Image
             src={category.imageUrl}
             alt={category.name}
@@ -21,7 +21,7 @@ const CategoryItem = ({ category }: CategoryItemProps) => {
           />
         </div>
 
-        <div className="rounded-bl-lg rounded-br-lg bg-accent py-3 lg:w-[386px] lg:py-4">
+        <div className="rounded-bl-lg rounded-br-lg bg-accent py-3 lg:w-[330px] lg:py-4">
           <p className="text-center text-sm font-semibold lg:text-lg">
             {category.name}
           </p>
