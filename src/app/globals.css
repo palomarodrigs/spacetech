@@ -93,3 +93,16 @@
     @apply w-[100%];
   }
 }
+
+::-webkit-scrollbar {
+  width: 0.45rem;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5033c3;
+  border-radius: 999px;
+}
