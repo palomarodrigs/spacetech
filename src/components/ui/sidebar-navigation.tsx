@@ -26,6 +26,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 import { Separator } from "./separator";
 import Link from "next/link";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { ModeToggle } from "./mode-toggle";
 
 const SidebarNavigation = () => {
   const { status, data } = useSession();
@@ -143,6 +144,10 @@ const SidebarNavigation = () => {
                 </Button>
               </Link>
             </SheetClose>
+          </div>
+
+          <div className="absolute bottom-6 left-6">
+            <ModeToggle />
           </div>
         </SheetContent>
       </Sheet>

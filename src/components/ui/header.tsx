@@ -20,6 +20,7 @@ import Link from "next/link";
 import SidebarNavigation from "./sidebar-navigation";
 import CartMenu from "./cart-menu";
 import { Button } from "./button";
+import { ModeToggle } from "./mode-toggle";
 
 const Header = () => {
   const { status, data } = useSession();
@@ -107,6 +108,10 @@ const Header = () => {
         </div>
 
         <CartMenu />
+
+        <div className="hidden lg:block">
+          <ModeToggle />
+        </div>
       </div>
     </Card>
   );
