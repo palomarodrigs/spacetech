@@ -82,7 +82,7 @@
 
 @layer utilities {
   .nav {
-    @apply relative font-semibold text-gray-600 hover:text-gray-800;
+    @apply relative font-semibold text-foreground duration-200 hover:text-gray-500 dark:hover:text-gray-300;
   }
 
   .nav::after {
