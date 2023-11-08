@@ -7,6 +7,7 @@ import Footer from "@/components/ui/footer";
 import CartProvider from "@/providers/cart";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
+import { ThemeProvider } from "./../components/ui/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,14 +25,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="flex h-full flex-col">
-          <AuthProvider>
-            <CartProvider>
-              <ToastContainer theme="colored" />
-              <Header />
-              <div className="flex-1">{children}</div>
-              <Footer />
-            </CartProvider>
-          </AuthProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <AuthProvider>
+              <CartProvider>
+                <ToastContainer theme="colored" />
+                <Header />
+                <div className="flex-1">{children}</div>
+                <Footer />
+              </CartProvider>
+            </AuthProvider>
+          </ThemeProvider>
         </div>
       </body>
     </html>
