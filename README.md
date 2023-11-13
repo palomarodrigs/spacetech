@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SpaceTech
 
-## Getting Started
+![preview](.github/preview.jpg)
 
-First, run the development server:
+## 🛒 Sobre
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+SpaceTech é um e-commerce de equipamentos de tecnologia, o usuário pode logar/deslogar com a conta do Google, trocar o tema para dark ou light mode, listar os produtos por categoria, visualizar produtos em oferta, ver detalhes do produto, adicionar ou remover do carrinho, no carrinho tem a soma de produtos com ou sem desconto, visualizar pedidos finalizados.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔨 Funcionalidades
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [x] Autenticação com Google
+- [x] Visualização de todos os produtos
+- [x] Visualização de produtos por categoria
+- [x] Visualização de produtos em oferta
+- [x] Ver detalhes do produto
+- [x] Adicionar produto ao carrinhos
+- [x] Remover produto do carrinho
+- [x] Soma dos produtos com ou sem desconto
+- [x] Finalizar pedido
+- [x] Visualização de pedidos finalizados
+- [x] Trocar tema para dark/light
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧪 Ferramentas
 
-## Learn More
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prisma](https://www.prisma.io/)
+- [TailwindCSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [clsx](https://www.npmjs.com/package/clsx)
+- [date-fns](https://date-fns.org/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Você pode acessar o projeto através [desse link](https://spacetech.vercel.app/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p align="center">Desenvolvido com 💜 por <a href="https://www.linkedin.com/in/palomarodrigs" target="_blank">Paloma Rodrigues</a></p>
