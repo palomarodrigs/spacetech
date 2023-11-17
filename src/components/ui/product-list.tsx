@@ -37,7 +37,7 @@ const ProductList = ({ products }: ProductListProps) => {
   }, [isDesktop, products, productViewLimit]);
 
   return (
-    <div className="flex w-full gap-4 overflow-x-auto px-5 lg:gap-[2.55rem] lg:px-[100px] [&::-webkit-scrollbar]:hidden">
+    <div className="flex w-full gap-4 overflow-x-auto px-5 lg:gap-[2.68rem] lg:px-[100px] [&::-webkit-scrollbar]:hidden">
       {visibleProducts.map((product) => (
         <div
           key={product.id}
