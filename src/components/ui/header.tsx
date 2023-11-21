@@ -21,6 +21,7 @@ import SidebarNavigation from "./sidebar-navigation";
 import CartMenu from "./cart-menu";
 import { Button } from "./button";
 import { ModeToggle } from "./mode-toggle";
+import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
 
 const Header = () => {
   const { status, data } = useSession();
@@ -66,8 +67,23 @@ const Header = () => {
       <div className="flex gap-7">
         <div className="hidden lg:block">
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex h-10 items-center justify-center rounded-md border border-input bg-background p-2 text-sm font-medium duration-300 hover:bg-accent hover:text-accent-foreground">
-              <UserIcon />
+            <DropdownMenuTrigger
+              className={`inline-flex h-10 items-center justify-center bg-background text-sm font-medium focus:ring-offset-background duration-300 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
+                status === "authenticated"
+                  ? "rounded-full border-none p-0"
+                  : "rounded-md border border-input p-2"
+              }`}
+            >
+              {status === "authenticated" && data?.user && (
+                <Avatar className="border border-input">
+                  <AvatarFallback>
+                    {data.user.name?.[0].toUpperCase()}
+                  </AvatarFallback>
+
+                  {data.user.image && <AvatarImage src={data.user.image} />}
+                </Avatar>
+              )}
+              {status === "unauthenticated" && <UserIcon />}
             </DropdownMenuTrigger>
 
             <DropdownMenuContent className="flex flex-col gap-2 p-2">
