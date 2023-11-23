@@ -5,6 +5,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { AuthProvider } from "@/providers/auth";
 import { ToastContainer } from "react-toastify";
+import Sidebar from "./dashboard/components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             <AuthProvider>
               <div className="flex overflow-hidden">
                 <ToastContainer theme="colored" />
+                <Sidebar />
                 {children}
               </div>
             </AuthProvider>
