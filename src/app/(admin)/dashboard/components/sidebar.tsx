@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Logo from "@/components/ui/logo";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import {
   LayoutDashboardIcon,
@@ -8,18 +9,12 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+
 const Sidebar = () => {
   return (
     <main className="hidden min-w-[300px] flex-col gap-8 border-r border-solid border-accent p-8 lg:flex">
       <header className="flex items-center justify-between">
-        <Link href="/dashboard">
-          <h1 className="text-xl font-semibold duration-300 hover:brightness-90">
-            <span className="bg-gradient-to-r from-[#5033C3] to-[#8162FF] bg-clip-text text-transparent">
-              Space
-            </span>
-            Tech
-          </h1>
-        </Link>
+        <Logo />
 
         <ModeToggle />
       </header>
