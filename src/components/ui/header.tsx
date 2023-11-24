@@ -22,6 +22,7 @@ import CartMenu from "./cart-menu";
 import { Button } from "./button";
 import { ModeToggle } from "./mode-toggle";
 import { Avatar, AvatarFallback, AvatarImage } from "./avatar";
+import Logo from "./logo";
 
 const Header = () => {
   const { status, data } = useSession();
@@ -37,14 +38,7 @@ const Header = () => {
     <Card className="flex items-center justify-between p-[1.25rem] lg:rounded-none lg:px-[6.25rem] lg:py-10">
       <SidebarNavigation />
 
-      <Link href="/">
-        <h1 className="text-lg font-semibold duration-300 hover:brightness-90 lg:text-2xl">
-          <span className="bg-gradient-to-r from-[#5033C3] to-[#8162FF] bg-clip-text text-transparent">
-            Space
-          </span>
-          Tech
-        </h1>
-      </Link>
+      <Logo />
 
       <div className="hidden lg:flex lg:gap-8">
         <Link href="/" className="nav">
@@ -68,7 +62,7 @@ const Header = () => {
         <div className="hidden lg:block">
           <DropdownMenu>
             <DropdownMenuTrigger
-              className={`inline-flex h-10 items-center justify-center bg-background text-sm font-medium focus:ring-offset-background duration-300 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 ${
+              className={`inline-flex h-10 items-center justify-center bg-background text-sm font-medium duration-300 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 focus:ring-offset-background ${
                 status === "authenticated"
                   ? "rounded-full border-none p-0"
                   : "rounded-md border border-input p-2"
