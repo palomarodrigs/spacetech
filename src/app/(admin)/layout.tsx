@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { AuthProvider } from "@/providers/auth";
 import { ToastContainer } from "react-toastify";
 import Sidebar from "./dashboard/components/sidebar";
+import Header from "./dashboard/components/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,10 @@ export default function RootLayout({
               <div className="flex overflow-hidden">
                 <ToastContainer theme="colored" />
                 <Sidebar />
-                {children}
+                <div className="flex w-full flex-col">
+                  <Header />
+                  {children}
+                </div>
               </div>
             </AuthProvider>
           </ThemeProvider>
