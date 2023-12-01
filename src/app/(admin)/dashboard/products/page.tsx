@@ -1,7 +1,7 @@
 import { prismaClient } from "@/lib/prisma";
 import ProductsTable, {
   ProductWithTotalPriceAndCategory,
-} from "../components/products-table";
+} from "./components/products-table";
 import { computeProductTotalPrice } from "@/helpers/product";
 import BadgeTitle from "@/components/ui/badge-title";
 import { PackageIcon } from "lucide-react";
