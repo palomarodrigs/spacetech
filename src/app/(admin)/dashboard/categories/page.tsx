@@ -2,6 +2,7 @@ import BadgeTitle from "@/components/ui/badge-title";
 import { prismaClient } from "@/lib/prisma";
 import { ListOrderedIcon } from "lucide-react";
 import CategoriesTable from "./components/categories-table";
+import CategoriesCard from "./components/categories-card";
 
 const CategoriesPage = async () => {
   const categories = await prismaClient.category.findMany({
@@ -22,6 +23,8 @@ const CategoriesPage = async () => {
       </span>
 
       <CategoriesTable categories={categories} />
+
+      <CategoriesCard categories={categories} />
     </main>
   );
 };
