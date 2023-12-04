@@ -5,6 +5,7 @@ import ProductsTable, {
 import { computeProductTotalPrice } from "@/helpers/product";
 import BadgeTitle from "@/components/ui/badge-title";
 import { PackageIcon } from "lucide-react";
+import ProductsCard from "./components/products-card";
 
 const ProductsPage = async () => {
   const products = await prismaClient.product.findMany({
@@ -31,6 +32,8 @@ const ProductsPage = async () => {
       </span>
 
       <ProductsTable products={productsWithTotalPrice} />
+
+      <ProductsCard products={productsWithTotalPrice} />
     </main>
   );
 };
