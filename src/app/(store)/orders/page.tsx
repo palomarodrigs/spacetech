@@ -35,7 +35,7 @@ const OrderPage = async () => {
   });
 
   return (
-    <div className="flex flex-col gap-8 p-5 lg:px-[100px] lg:py-10 ">
+    <div className="flex flex-col gap-8 p-5 lg:px-[100px] lg:py-10">
       {orders.length > 0 ? (
         <BadgeTitle
           icon={<PackageSearchIcon size={16} />}
@@ -47,7 +47,7 @@ const OrderPage = async () => {
         {orders.length > 0 ? (
           orders.map((order) => <OrderItem key={order.id} order={order} />)
         ) : (
-          <div className="mt-[14.5rem] flex flex-col items-center justify-center gap-2">
+          <div className="flex flex-col items-center justify-center gap-2">
             <PackageXIcon size={35} />
 
             <div className="text-center">
