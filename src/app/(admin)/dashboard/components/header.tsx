@@ -112,7 +112,7 @@ const Header = () => {
             </SheetClose>
 
             <SheetClose asChild>
-              <Link href="/orders">
+              <Link href="/dashboard/products">
                 <Button
                   variant="outline"
                   className="w-full justify-start gap-2"
@@ -124,7 +124,7 @@ const Header = () => {
             </SheetClose>
 
             <SheetClose asChild>
-              <Link href="/deals">
+              <Link href="/dashboard/categories">
                 <Button
                   variant="outline"
                   className="w-full justify-start gap-2"
@@ -136,7 +136,7 @@ const Header = () => {
             </SheetClose>
 
             <SheetClose asChild>
-              <Link href="/catalog">
+              <Link href="/dashboard/orders">
                 <Button
                   variant="outline"
                   className="w-full justify-start gap-2"
