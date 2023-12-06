@@ -4,7 +4,7 @@
 
 ## 🛒 Sobre
 
-SpaceTech é um e-commerce de equipamentos de tecnologia, o usuário pode logar/deslogar com a conta do Google, trocar o tema para dark ou light mode, listar os produtos por categoria, visualizar produtos em oferta, ver detalhes do produto, adicionar ou remover do carrinho, no carrinho tem a soma de produtos com ou sem desconto, visualizar pedidos finalizados.
+SpaceTech é um e-commerce de equipamentos de tecnologia, o usuário pode logar/deslogar com a conta do Google, trocar o tema para dark ou light mode, listar os produtos por categoria, visualizar produtos em oferta, ver detalhes do produto, adicionar ou remover do carrinho, no carrinho tem a soma de produtos com ou sem desconto e visualizar os seus pedidos. O administrador tem acesso ao dashboard, visualizar todos os produtos, categorias e pedidos.
 
 ## 🔨 Funcionalidades
 
@@ -19,6 +19,10 @@ SpaceTech é um e-commerce de equipamentos de tecnologia, o usuário pode logar/
 - [x] Finalizar pedido
 - [x] Visualização de pedidos finalizados
 - [x] Trocar tema para dark/light
+- [x] Admin: Acesso ao dashboard
+- [x] Admin: Acesso á todos os produtos
+- [x] Admin: Acesso á todas as categorias
+- [x] Admin: Acesso á todos os pedidos
 
 ## 🧪 Ferramentas
 
